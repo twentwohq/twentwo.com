@@ -13,8 +13,8 @@ export default function Home() {
       {/* Header */}
       <header className="relative z-10 p-6 md:p-8">
         <nav className="flex justify-between items-center max-w-7xl mx-auto">
-          <div className="text-4xl font-bold">
-            <span className="text-white">22</span>
+          <div className="flex items-center">
+            <img src="/logo-22.svg" alt="Twentwo" className="w-12 h-12" />
           </div>
           <div className="hidden md:flex space-x-6">
             <a href="#about" className="hover:text-gray-300 transition-colors">About</a>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Twentwo",
   description: "Technology company building innovative solutions",
   icons: {
-    icon: '/favicon.svg',
+    icon: '/logo-22.svg',
   },
 };
 
