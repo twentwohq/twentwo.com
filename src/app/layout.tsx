@@ -13,10 +13,56 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Twentwo",
-  description: "Technology company building innovative solutions",
+  title: "Twentwo - Technology Company | Building Innovative Solutions",
+  description: "Twentwo is a pragmatic technology company focused on building innovative solutions and meaningful products. Founded in 2025, we create cutting-edge technology solutions.",
+  keywords: "Twentwo, twentwo, twenty two, 22, technology company, tech startup, innovative solutions, software development, Jason Ganub",
+  authors: [{ name: "Jason Ganub" }],
+  creator: "Jason Ganub",
+  publisher: "Twentwo",
+  metadataBase: new URL('https://twentwo.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Twentwo - Technology Company",
+    description: "Twentwo is a pragmatic technology company focused on building innovative solutions and meaningful products.",
+    url: 'https://twentwo.com',
+    siteName: 'Twentwo',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/logo-22.png',
+        width: 300,
+        height: 300,
+        alt: 'Twentwo Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Twentwo - Technology Company',
+    description: 'Building the future, one project at a time.',
+    creator: '@jason_ganub',
+    images: ['/logo-22.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: '/logo-22.svg',
+    apple: '/logo-22.png',
+  },
+  verification: {
+    google: 'verification-token',
   },
 };
 

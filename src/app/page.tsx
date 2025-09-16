@@ -1,7 +1,41 @@
 'use client';
 
+import Script from 'next/script';
+
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Twentwo",
+    "alternateName": ["22", "Twenty Two", "twentwo"],
+    "url": "https://twentwo.com",
+    "logo": "https://twentwo.com/logo-22.png",
+    "description": "Twentwo is a pragmatic technology company focused on building innovative solutions and meaningful products.",
+    "founder": {
+      "@type": "Person",
+      "name": "Jason Ganub"
+    },
+    "foundingDate": "2025",
+    "email": "jason@twentwo.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/twentwo/",
+      "https://github.com/twentwohq",
+      "https://twitter.com/jason_ganub"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "jason@twentwo.com",
+      "contactType": "customer service"
+    }
+  };
+
   return (
+    <>
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
     <div className="min-h-screen bg-gradient-to-br from-black via-[#111111] to-[#1a1a1a] text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -26,7 +60,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="relative z-10 flex flex-col items-center justify-center px-6 md:px-8 py-20 md:py-32">
         {/* Hero Section */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <section className="text-center max-w-4xl mx-auto mb-16" aria-label="Hero">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-gray-900 border border-gray-800 rounded-full text-sm font-medium mb-6 animate-fade-in">
               <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 animate-pulse"></div>
@@ -56,10 +90,10 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Stats/Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-20">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-20" aria-label="Company Statistics">
           <div className="text-center p-6 bg-gray-900/30 rounded-lg border border-gray-800 backdrop-blur-sm animate-fade-in-up animation-delay-600">
             <div className="text-3xl font-bold text-white mb-2">2025</div>
             <div className="text-gray-400">Founded</div>
@@ -72,7 +106,7 @@ export default function Home() {
             <div className="text-3xl font-bold text-white mb-2">Build</div>
             <div className="text-gray-400">First</div>
           </div>
-        </div>
+        </section>
       </main>
 
       {/* About Section */}
@@ -143,5 +177,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

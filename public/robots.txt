@@ -1,0 +1,29 @@
+# Twentwo Robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Crawl-delay: 0
+
+# Sitemap location
+Sitemap: https://twentwo.com/sitemap.xml
+
+# Allow search engines to index everything
+Disallow: 
+
+# Specific search engine optimizations
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 0
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 0
