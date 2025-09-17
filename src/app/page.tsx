@@ -9,7 +9,12 @@ export default function Home() {
     "name": "Twentwo",
     "alternateName": ["22", "Twenty Two", "twentwo"],
     "url": "https://twentwo.com",
-    "logo": "https://twentwo.com/logo-22.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://twentwo.com/logo-22.png",
+      "width": 300,
+      "height": 300
+    },
     "description": "Twentwo is a pragmatic technology company focused on building innovative solutions and meaningful products.",
     "founder": {
       "@type": "Person",

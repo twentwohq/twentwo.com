@@ -57,10 +57,34 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: '/logo-22.svg',
-    apple: '/logo-22.png',
-  },
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      url: '/logo-22.svg',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/logo-22.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      url: '/logo-22.png',
+    },
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      url: '/logo-22.png',
+    },
+    {
+      rel: 'shortcut icon',
+      url: '/logo-22.png',
+    }
+  ],
   verification: {
     google: 'verification-token',
   },
